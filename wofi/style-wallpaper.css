@@ -1,0 +1,89 @@
+@import url('/home/eli/.cache/wal/colors-waybar.css');
+@define-color mauve  @color9;
+@define-color red  @color9;
+@define-color lavender  @color7;
+@define-color text  @color7;
+* {
+    all:unset;
+    font-family: 'FiraCode', monospace;
+    font-size: 18px;
+    outline: none;
+    border: none;
+    text-shadow:none;
+    background-color:transparent;
+}
+
+window {
+    all:unset;
+    padding: 20px;
+    border-radius: 0px;
+    background-color: alpha(#1e1d1d, 0.8);
+}
+#inner-box {
+    border: none;
+}
+#outer-box {    
+    border: none;
+}
+#scroll {
+    margin: 0px;
+    padding: 30px;
+    border: none;
+}
+#input {
+    all:unset;
+    margin-left:20px;
+    margin-right:20px;
+    margin-top:20px;
+    padding: 20px;
+    border: none;
+    outline: none;
+    color: @text;
+    box-shadow: 1px 1px 5px rgba(0,0,0, .5);
+    border-radius:10;
+    background-color: alpha(#3d3d3d,.2);
+}
+#input image {
+    border: none;
+    border-radius: 20px;
+    color: @red;
+}
+#input * {
+    border: none;
+    outline: none;
+}
+
+#input:focus {
+    outline: none;
+    border: none;
+
+    border-radius:5;
+}
+#text {
+    border: none;
+    color: white;
+    outline: none;
+}
+#entry {
+    all:unset;
+    padding: 15px;
+    border-radius: 5px;
+    margin: 5px;
+    border: 2px solid #3d3d3d
+}
+#entry arrow {
+    border: none;
+    color: @lavender;
+
+}
+#entry:selected {
+    border: 2px solid;
+    border-radius: 5px;
+    background-color: alpha(@background,.2);
+}
+#entry:selected #text {
+    color: @mauve;
+}
+#entry:drop(active) {
+    background-color: @lavender !important;
+}
