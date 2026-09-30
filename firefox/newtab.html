@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New tab</title>
+    <link rel="stylesheet" href="./newtab.css">
+</head>
+<body onload="startTime()">
+    <div class="container #wrapper">
+        <h1 id="clock" class="clock">new tab</h1>
+        <div class="quicklinks">
+            <a href="https://github.com/">github</a>
+            <a href="https://ranssi.paivola.fi/">ranssi</a>
+            <a href="https://moodle.paivola.fi/">moodle</a>
+	    <a href="https://cine.su/">shows</a>
+            <!--<a href="https://en.wikipedia.org/wiki/Male_reproductive_system/">Male reproductive system</a>-->
+
+        </div>
+    </div>
+
+</body>
+<script>
+function startTime() {
+  const today = new Date();
+  let h = today.getHours();
+  let m = today.getMinutes();
+  let s = today.getSeconds();
+  m = checkTime(m);
+  s = checkTime(s);
+  document.getElementById("clock").innerHTML =  h + ":" + m + ":" + s;
+  setTimeout(startTime, 1000);
+}
+
+function checkTime(i) {
+  if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+  return i;
+}
+</script>
+</html>
