@@ -1,0 +1,55 @@
+/* Tab bar */
+#TabsToolbar {
+    background-color: #171717 !important;
+}
+
+
+/* Active tab */
+.tabbrowser-tab[selected="true"] {
+    background-color: #171717 !important;
+    border: 1px solid #268551 !important;
+    border-radius: 0;
+}
+.tabbrowser-tab  {
+    background-color: #171717 !important;
+    /*border: 1px solid #3d3d3d !important;*/
+    border-radius: 0;
+    padding-left: 10px !important;
+    margin-right: 7.5px !important;
+    margin-top: 4px !important;
+    margin-bottom: 4px !important;
+
+}
+
+.tabbrowser-tab[selected="true"] .tab-background {
+    background-color: #171717 !important;
+    box-shadow: none !important;
+}
+
+.browser-toolbar {
+    background-color: #171717 !important;
+}
+
+#navigator-toolbox,
+#TabsToolbar,
+#nav-bar {
+    background-color: #171717 !important;
+}
+
+.urlbar-background {
+    background-color: #171717 !important;
+    border: 0 !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+}
+
+.urlbar-background[focused="true"] {
+    background-color: red;
+}
+
+#urlbar[focused] > #urlbar-background,
+#urlbar[focused="true"] > #urlbar-background {
+  box-shadow: none !important;
+  outline: none !important;
+  border: none !important;
+}
