@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+clear
+python /home/hamlak/projektit/hirvet/main.py

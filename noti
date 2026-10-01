@@ -1,0 +1,4 @@
+#!/usr/bin/env zsh
+
+zsh /home/hamlak/.bin/notifications/song_notify &
+qs -p /home/hamlak/.bin/notifications/notifications.qml

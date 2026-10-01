@@ -1,0 +1,4 @@
+playerctl metadata --format '{{artist}} - {{title}}' --follow |
+while IFS= read -r song; do
+    notify-send "now playing 🎶" "$song"
+done
