@@ -1,39 +1,47 @@
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
-# Initialization code that may require console input (password prompts, [y/n]
-# confirmations, etc.) must go above this block; everything else may go below.
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
+# ~/.zshrc
 
-# Lines configured by zsh-newuser-install
-HISTFILE=~/.histfile
-HISTSIZE=1000
-SAVEHIST=1000
-setopt autocd
-unsetopt beep
-bindkey -v
-# End of lines configured by zsh-newuser-install
-# The following lines were added by compinstall
-zstyle :compinstall filename '/home/hamlak/.zshrc'
-ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=#666666'
+# omz
+export ZSH="$HOME/.oh-my-zsh"
 
-# Declare the variable
-typeset -A ZSH_HIGHLIGHT_STYLES
+ZSH_THEME="powerlevel10k/powerlevel10k"
 
-# To differentiate aliases from other command types
-ZSH_HIGHLIGHT_STYLES[alias]='fg=magenta,bold'
+plugins=(
+    git
+)
 
-# To have paths colored instead of underlined
-ZSH_HIGHLIGHT_STYLES[path]='fg=cyan'
+source "$ZSH/oh-my-zsh.sh"
 
-# To disable highlighting of globbing expressions
-ZSH_HIGHLIGHT_STYLES[globbing]='none'
 
+# p10k
+[[ -f ~/.p10k.zsh ]] && source ~/.p10k.zsh
+
+
+# completion
 autoload -Uz compinit
 compinit
-# End of lines added by compinstall
 
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+# autocompletion
+source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 
-path=('/home/hamlak/.bin' $path)
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=241'
+
+# aliases
+alias ll='ls -l'
+alias edit='sudo -e'
+alias update='sudo pacman -Syu'
+alias rebuild='sudo systemctl daemon-reload'
+alias cl='clear'
+alias battery='cat /sys/class/power_supply/BAT0/capacity'
+
+# misc
+alias penis='echo penis; echo "hihi :3"'
+alias dihh="echo 'i want a dih in my ass'"
+alias dih='echo "zsh: command not found: too small"'
+alias dihcord='vesktop'
+alias shutup='shutdown now'
+alias kys='echo "kill yourself"'
+
+# paths
+export PATH=$PATH:/home/hamlak/.spicetify
+export PATH="$HOME/.local/bin:$PATH"
+export PATH="$HOME/.bin:$PATH"
