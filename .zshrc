@@ -35,7 +35,7 @@ alias battery='cat /sys/class/power_supply/BAT0/capacity'
 
 # misc
 alias penis='echo penis; echo "hihi :3"'
-alias dihh="echo 'i want a dih in my ass'"
+alias dihh="echo 'i want a dih in my ass :3'"
 alias dih='echo "zsh: command not found: too small"'
 alias dihcord='vesktop'
 alias shutup='shutdown now'
